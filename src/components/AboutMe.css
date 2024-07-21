@@ -1,0 +1,102 @@
+#aboutme {
+    height: 100vh;
+    align-items: center;
+    background-color: #FFF5E1;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    flex-direction: row;
+    border-radius: 1rem;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.text {
+    width: 50%;
+    text-align: start;
+}
+
+#aboutme h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #708871;
+    font-weight: bold;
+    font-size: 2.5rem;
+    animation: fade-in .8s ease 0s 1 normal forwards;
+    animation-delay: .1s;
+}
+
+#aboutme p {
+    font-family: 'Lato', sans-serif;
+    color: #708871;
+    font-size: 1.25rem;
+    animation: fade-in .8s ease 0s 1 normal forwards;
+    animation-delay: .2s;
+}
+
+#aboutme img {
+    max-width: 20vw; /* Adjusted to make the image smaller by default */
+    height: auto;
+    margin-top: 0;
+    animation: fade-in .8s ease 0s 1 normal forwards;
+    margin: 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    #aboutme h1 {
+        font-size: 2rem;
+    }
+
+    #aboutme p {
+        font-size: 1rem;
+    }
+
+    #aboutme img {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    #aboutme h1 {
+        font-size: 1.75rem;
+    }
+
+    #aboutme p {
+        font-size: 0.9rem;
+    }
+
+    #aboutme img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    #aboutme h1 {
+        font-size: 1.5rem;
+    }
+
+    #aboutme p {
+        font-size: 0.8rem;
+    }
+
+    #aboutme img {
+        max-width: 90%;
+    }
+}
