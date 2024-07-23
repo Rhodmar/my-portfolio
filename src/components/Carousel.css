@@ -1,0 +1,98 @@
+.carousel {
+    position: relative;
+    height: 80%; /* Increase the width for larger images */
+    margin: 0 .5rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    justify-content: right;
+}
+
+.carousel-images {
+    display: flex;
+    
+    transition: transform 0.5s ease-in-out; /* Smooth transition effect */
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 50vh; /* Limit the maximum height */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: #708871;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1;
+}
+
+.prev {
+    left: .5rem;
+    opacity: 0;
+}
+
+.next {
+    right: .5rem;
+    opacity: 0;
+}
+
+.next:hover, .prev:hover {
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: .25rem;
+    width: 100%;
+}
+
+.indicator {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
+    margin: 0 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #708871; /* Change this to your preferred active color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel-control {
+        font-size: 1.5rem;
+    }
+
+    .carousel-images img {
+        max-height: 40vh; /* Adjust max height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-control {
+        font-size: 1rem;
+    }
+
+    .carousel-images img {
+        max-height: 30vh; /* Adjust max height for smaller screens */
+    }
+}

@@ -1,0 +1,222 @@
+#works {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+    padding-bottom: 0;
+    padding-top: 0;
+    overflow: hidden; /* Ensure the body does not scroll */
+    position: relative; /* Ensure proper positioning */
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    overflow: hidden; /* Prevent content from overflowing */
+    position: relative; /* Ensure proper positioning */
+}
+
+.text {
+    flex-shrink: 0; /* Prevent text from shrinking */
+}
+
+#works h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #708871;
+    font-weight: bold;
+    font-size: 5rem;
+    margin-right: 2rem;
+    animation: fade-in .8s ease 0s 1 normal forwards;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-height: 80vh; /* Limit height of the scrollable area */
+    overflow-y: scroll; /* Scrollable content */
+    padding-right: 12px; /* Reserve space for scrollbar */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+}
+
+.fadedScroller_fade {
+    content: '';
+    margin-top: -100px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(251, 251, 251, 1) 0%, rgba(251, 251, 251, 0) 100%);
+    position: relative;
+  }
+
+  .project {
+    margin: 2rem 0 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; /* Adjust gap between carousel and project info */
+    align-items: center; /* Center items vertically */
+}
+
+.project-info {
+    flex: 1; /* Allow project-info to take up remaining space */
+    max-width: 600px; /* Set a maximum width if needed */
+    margin-left: 0rem; /* Add some space between carousel and project-info */
+}
+
+.carousel {
+    flex: 1; /* Allow carousel to take up remaining space */
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 1rem;
+    height: fit-content;
+}
+
+
+#works h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #708871;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin: 0;
+    animation: fade-in .8s ease 0s 1 normal forwards;
+}
+
+#works h3 {
+    font-family: 'Lato', sans-serif;
+    color: #708871;
+    margin: 0;
+}
+
+#works p {
+    font-family: 'Poppins', sans-serif;
+    color: #272727;
+    font-size: 1.15rem;
+}
+
+/* Styles for tags */
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.tag {
+    background-color: #BEC6A0;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-family: 'lato', sans-serif;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        margin-top: 5rem;
+    }
+    .text {
+        text-align: center;
+    }
+    #works h1 {
+        margin-bottom: 1.5rem;
+        font-size: 3rem; /* Adjust font size for smaller screens */
+    }
+
+    .projects {
+        justify-content: center;
+        overflow-y: auto; /* Ensure scrolling still works on smaller screens */
+    }
+
+    .project {
+        flex-direction: column; /* Stack the carousel and project info vertically */
+        align-items: left;
+    }
+
+    .projects {
+        justify-content: start;
+    }
+
+    .carousel {
+        width: 100%; /* Ensure the carousel takes full width */
+    }
+
+}
+
+@media (max-width: 768px) {
+    #works h1 {
+        font-size: 3srem; /* Further adjust font size for smaller screens */
+    }
+
+    .carousel-container img {
+        max-width: 80px; /* Adjust as needed for smaller screens */
+    }
+    .projects {
+        justify-content: start;
+    }
+}
+
+@media (max-width: 480px) {
+    #works h1 {
+        font-size: 1.5rem; /* Further adjust font size for mobile screens */
+    }
+
+    .carousel-container img {
+        max-width: 60px; /* Adjust as needed for mobile screens */
+    }
+}
+
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+  scrollbar-width: thin;
+  scrollbar-color: #8BA98C #DFE9EB;
+}*/
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background-color: transparent;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: transparent;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #8BA98C;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #708871;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #5F7360;
+  }
+  

@@ -1,0 +1,49 @@
+footer {
+    background-color: transparent;
+    padding: 1rem;
+    text-align: center;
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 1rem;
+}
+
+.footer-left {
+    font-family: 'Lato', sans-serif;
+    color: #708871;
+    font-size: 1rem;
+}
+
+.footer-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-right a {
+    color: #708871;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    color: #5a6a5a; /* Slightly darker shade for hover effect */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left {
+        margin-bottom: 1rem;
+    }
+}

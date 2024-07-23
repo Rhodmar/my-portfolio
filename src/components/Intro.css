@@ -39,8 +39,22 @@
     animation-delay: .1s;
 }
 
+@media (max-width: 1200px) {
+    #intro {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #intro {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 @media (max-width: 480px) {
     #intro h1{
-        margin-top: 14rem;
+        align-items: center;
     }
 }

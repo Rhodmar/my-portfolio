@@ -31,6 +31,7 @@
     font-size: 2.5rem;
     animation: fade-in .8s ease 0s 1 normal forwards;
     animation-delay: .1s;
+    opacity: 0;
 }
 
 #aboutme p {
@@ -39,6 +40,7 @@
     font-size: 1.25rem;
     animation: fade-in .8s ease 0s 1 normal forwards;
     animation-delay: .2s;
+    opacity: 0;
 }
 
 #aboutme img {
@@ -47,6 +49,7 @@
     margin-top: 0;
     animation: fade-in .8s ease 0s 1 normal forwards;
     margin: 2rem;
+    opacity: 0;
 }
 
 /* Media Queries */
