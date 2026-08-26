@@ -5,7 +5,7 @@ const AboutMe = () => {
         <section id="aboutme">
             <div className="container">
                 <div className='image'>
-                    <img src="/img/gems2.png" alt="Gems" className="profile-pic" />
+                    <img src={`${process.env.PUBLIC_URL}/img/gems2.png`} alt="Gems" className="profile-pic" />
                 </div>
                 <div className="text">
                     <h1>I'm a web developer who loves to create sleek, user-friendly websites.</h1>

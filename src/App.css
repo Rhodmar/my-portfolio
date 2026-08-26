@@ -13,17 +13,23 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow: hidden; /* Ensure no scrolling */
     background-color: #FFF5E1;
 }
 
 main {
     flex: 1; /* Ensures main content takes up available space */
-    overflow: hidden; /* Prevent scrolling in the main content */
+    overflow-y: auto; /* Scroll instead of clipping when content is taller than the viewport */
+    scroll-behavior: smooth;
 }
 
 footer {
     background-color: transparent;
     padding: 1rem;
     text-align: center;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #708871;
+    outline-offset: 3px;
 }

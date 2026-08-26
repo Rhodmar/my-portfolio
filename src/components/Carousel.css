@@ -38,19 +38,31 @@
     z-index: 1;
 }
 
+.carousel-control {
+    background-color: rgba(255, 253, 247, 0.6);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
 .prev {
     left: .5rem;
-    opacity: 0;
+    opacity: 0.5;
 }
 
 .next {
     right: .5rem;
-    opacity: 0;
+    opacity: 0.5;
 }
 
 .next:hover, .prev:hover {
     opacity: 1;
-    transition: opacity .3s ease;
+    background-color: rgba(255, 253, 247, 0.9);
+    transition: opacity .2s ease, background-color .2s ease;
 }
 
 .carousel-indicators {

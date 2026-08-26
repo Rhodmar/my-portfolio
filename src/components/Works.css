@@ -66,22 +66,23 @@
   .project {
     margin: 2rem 0 0 2rem;
     display: flex;
-    justify-content: space-between;
-    gap: 2rem; /* Adjust gap between carousel and project info */
-    align-items: center; /* Center items vertically */
+    flex-direction: column; /* Big image on top, details below, at any width */
+    align-items: flex-start;
+    gap: 1.5rem; /* Space between carousel and project info */
 }
 
 .project-info {
-    flex: 1; /* Allow project-info to take up remaining space */
+    width: 100%;
     max-width: 600px; /* Set a maximum width if needed */
     margin-left: 0rem; /* Add some space between carousel and project-info */
+    min-width: 0;
 }
 
-.carousel {
-    flex: 1; /* Allow carousel to take up remaining space */
+.carousel-wrapper {
     display: flex;
     flex-wrap: wrap-reverse;
     gap: 1rem;
+    width: 100%;
     height: fit-content;
 }
 
@@ -103,7 +104,7 @@
 
 #works p {
     font-family: 'Poppins', sans-serif;
-    color: #272727;
+    color: #4A5A4A;
     font-size: 1.15rem;
 }
 
@@ -141,23 +142,9 @@
     }
 
     .projects {
-        justify-content: center;
+        justify-content: start;
         overflow-y: auto; /* Ensure scrolling still works on smaller screens */
     }
-
-    .project {
-        flex-direction: column; /* Stack the carousel and project info vertically */
-        align-items: left;
-    }
-
-    .projects {
-        justify-content: start;
-    }
-
-    .carousel {
-        width: 100%; /* Ensure the carousel takes full width */
-    }
-
 }
 
 @media (max-width: 768px) {
@@ -176,6 +163,10 @@
 @media (max-width: 480px) {
     #works h1 {
         font-size: 1.5rem; /* Further adjust font size for mobile screens */
+    }
+
+    .content {
+        margin-top: 4.5rem; /* Clear the fixed nav bar on small screens */
     }
 
     .carousel-container img {

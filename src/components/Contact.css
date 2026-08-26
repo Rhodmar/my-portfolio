@@ -63,33 +63,46 @@
 .form input,
 .form textarea {
     font-family: 'Lato', sans-serif;
-    border: none;
+    border: 1px solid rgba(112, 136, 113, 0.15);
     border-radius: 10px;
     padding: 0.75rem;
     margin-bottom: 1rem;
     font-size: 1rem;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.form input:focus, 
+.form input:focus,
 .form textarea:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #a8d5a0; /* Subtle shadow or border for focus */
+    border-color: #708871;
+    box-shadow: 0 0 0 3px rgba(112, 136, 113, 0.2); /* Subtle shadow or border for focus */
 }
 
 .form button {
     background-color: #708871;
     color: white;
     border: none;
-    padding: 0.75rem;
-    border-radius: 4px;
+    padding: 0.85rem;
+    border-radius: 8px;
     font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .form button:hover {
     background-color: #5a6a5a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(90, 106, 90, 0.3);
+}
+
+.form button:focus-visible,
+.form input:focus-visible,
+.form textarea:focus-visible {
+    outline: 2px solid #708871;
+    outline-offset: 2px;
 }
 
 /* Media Queries */
@@ -124,6 +137,11 @@
 }
 
 @media (max-width: 480px) {
+    #contact {
+        padding-top: 4.5rem; /* Clear the fixed nav bar on small screens */
+        align-items: flex-start;
+    }
+
     .text h1 {
         font-size: 1.5rem;
     }
