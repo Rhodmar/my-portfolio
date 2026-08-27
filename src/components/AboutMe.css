@@ -38,9 +38,14 @@
     font-family: 'Lato', sans-serif;
     color: #708871;
     font-size: 1.25rem;
+    margin: 0 0 1rem;
     animation: fade-in .8s ease 0s 1 normal forwards;
     animation-delay: .2s;
     opacity: 0;
+}
+
+#aboutme p:last-child {
+    margin-bottom: 0;
 }
 
 #aboutme img {

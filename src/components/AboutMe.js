@@ -8,8 +8,10 @@ const AboutMe = () => {
                     <img src={`${process.env.PUBLIC_URL}/img/gems2.png`} alt="Gems" className="profile-pic" />
                 </div>
                 <div className="text">
-                    <h1>I'm a web developer who loves to create sleek, user-friendly websites.</h1>
-                    <p>When I'm not coding, you'll find me exploring the latest tech trends or playing video games. <br></br><br></br>Graduated from the University of San Jose-Recoletos and had a blast interning at Accenture, where I built cool automation solutions from scratch. <br></br><br></br> Now, I'm ready to take on the world one line of code at a time!</p>
+                    <h1>I'm a developer who loves building sleek, user-friendly experiences, and lately, sleek video edits too.</h1>
+                    <p>These days, I'm a Project and Flow Manager at Chadwick Digital, where I design automations, manage CRM systems, and run content across social platforms.</p>
+                    <p>Before that, I graduated from the University of San Jose-Recoletos and interned at Accenture, building automation solutions from scratch.</p>
+                    <p>I'm also branching into video editing, so if you need someone who can code it, manage it, and edit it, let's talk. When I'm not doing any of that, you'll find me exploring the latest tech or playing video games.</p>
                 </div>
             </div>
         </section>
